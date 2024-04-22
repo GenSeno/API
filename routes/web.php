@@ -16,3 +16,17 @@
 $router->get('/', function () use ($router) {
     return $router->app->version();
 });
+
+//API GATEWAYS ROUTES FOR SITE1 users
+$router->get('/users1', 'User1Controller@index'); // get all users 
+$router->post('/users1', 'User1Controller@add'); // create new user 
+$router->get('/users1/{id}', 'User1Controller@show'); // get user by id
+$router->put('/users1/{id}', 'User1Controller@update'); // update user
+$router->delete('/users1/{id}', 'User1Controller@delete'); // delete user
+
+//API GATEWAYS ROUTES FOR SITE2 users
+$router->get('/users2', 'User2Controller@index'); // get all users 
+$router->post('/users2', 'User2Controller@add'); // create new user 
+$router->get('/users2/{id}', 'User2Controller@show'); // get user by id
+$router->put('/users2/{id}', 'User2Controller@update'); // update user
+$router->delete('/users2/{id}', 'User2Controller@delete'); // delete user
